@@ -1,0 +1,93 @@
+.menuStyle {
+  
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+.insideMenu
+{
+  /* width: 100%; */
+  /* background-color: pink; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuFlex {
+  /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+}
+.mr {
+  /* margin-right: 90px; */
+  /* background-color: red; */
+  /* margin-left: -200px; */
+}
+
+.headerDiv {
+  /* width: 100%; */
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* background-color: orange !important; */
+}
+.wsmenuCustom {
+  margin-left: 350px;
+  float: left;
+
+}
+.ulListCustom
+{
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+
+.customdesklogo
+{
+ 
+  margin-left: -300px;
+}
+.ulListCustom
+{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ /* background-color: pink; */
+ margin-left: 150px;
+ width: 100%;
+}
+.wsmenuCustom
+{
+  /* background-color: orange !important; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.customGetStartedBtn
+{
+  margin-left: 50px;
+  /* background-color: red; */
+}
+.ulDivCustom
+{
+  background-color:pink !important;
+}
+.customMarginR
+{
+  margin-left: 50px;
+  
+}
+/* .btnUl
+{
+  display: flex;
+} */
+.btnUlCustom
+{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* background-color: pink; */
+  margin-left: 190px;
+  width: 60%;
+  justify-content: flex-end;
+}

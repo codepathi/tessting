@@ -1,0 +1,154 @@
+.button{
+    margin-right: 10%;
+   
+}
+.formButton{
+    margin-left:-20%;
+}
+.rendering{
+    color: rgb(220, 10, 24)
+}
+.getStarted{
+    background-color: rgb(220, 10, 24);
+    color: white;
+    padding: 1.7rem;
+    border-radius: 15px;
+    width: 40%;
+}
+.getStarted:hover{
+    /* color:white */
+    background-color: rgb(220, 10, 24);
+}
+.thecontent
+{
+    margin-top: 80px;
+   
+}
+@media (min-width:992px)
+ {
+     .thecontent
+     {
+        margin-top: 0;
+        
+     }
+   
+}
+
+.thetitle
+{
+    /* font-size: 50px; */
+    /* font-size: 4rem; */
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1.075;
+    margin-bottom: 35px;
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* insert styles here */
+    .thetitle
+    {
+        font-size: 2rem;
+        /* background-color: orange; */
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    /* insert styles here */
+    .thetitle
+    {
+        font-size: 3.9rem;
+        /* background-color: pink; */
+    }
+    .theparagraph
+    {
+      
+        font-size: 1.70rem;
+        /* background-color: pink; */
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    /* insert styles here */
+    .thetitle
+    {
+        font-size: 3.8rem;
+        /* background-color: green; */
+    }
+    .theparagraph
+    {
+      
+        font-size: 1.60rem;
+        /* background-color: pink; */
+    }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+    .thetitle
+    {
+        font-size: 3.5rem;
+        /* background-color: blue; */
+    }
+    .theparagraph
+    {
+      
+        font-size: 1.40rem;
+        /* background-color: pink; */
+    }
+}
+@media only screen and (min-device-width: 1201px) {
+    .thetitle
+    {
+        /* font-size: 50px; */
+        font-size: 3.125rem;
+        /* background-color: red; */
+    }
+    .theparagraph
+    {
+      
+        font-size: 1.25rem;
+        /* background-color: pink; */
+    }
+}
+
+
+
+.theparagraph
+{
+    color: rgba(38, 39, 41, 0.7);
+    margin-bottom: 53px;
+  
+}
+.box
+{
+    min-width: 100%;
+    height: 70px;
+    border-radius: 20px;
+}
+/* @media (min-width:480px) {
+    .box
+    {
+        min-width: 172px;
+
+    }
+} */
+
+.paragraphLets
+{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 28px;
+    margin-top: 18px;
+    margin-bottom: 0;
+   
+}
+.flexing
+{
+    display: flex;
+}
+@media screen and (max-width: 761px) {
+    .flexing {
+      flex-direction: column-reverse;
+    }
+  }
+

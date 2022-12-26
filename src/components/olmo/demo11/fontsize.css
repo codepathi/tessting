@@ -1,0 +1,74 @@
+
+
+
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* insert styles here */
+    .headings
+    {
+        font-size: 2rem;
+        /* background-color: orange; */
+    }
+    .pTag
+    {
+        font-size: 1rem !important;
+        /* text-align: center; */
+
+    }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    /* insert styles here */
+    .headings
+    {
+        font-size: 3.9rem;
+        /* background-color: pink; */
+    }
+    .pTag
+    {
+        font-size: 1.7rem !important;
+        /* text-align: center; */
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+    /* insert styles here */
+    .headings
+    {
+        font-size: 3.8rem;
+        /* background-color: green; */
+    }
+    .pTag
+    {
+        font-size: 1.6rem !important;
+        /* text-align: center; */
+
+    }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
+    .headings
+    {
+        font-size: 3.5rem;
+        /* background-color: blue; */
+    }
+    .pTag
+    {
+        font-size: 1.25rem !important;
+        /* text-align: center; */
+
+    }
+   
+}
+@media only screen and (min-device-width: 1201px) {
+    .headings
+    {
+        font-size: 2.8rem;
+        /* background-color: red; */
+    }
+    .pTag
+    {
+        font-size: 1.1rem !important;
+        /* text-align: center; */
+    }
+   
+}

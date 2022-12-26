@@ -1,0 +1,28 @@
+.imageSuraj {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 30rem !important;
+
+}
+
+/* @media (min-width: 1199px) {
+  .imageSuraj {
+    width: 100% !important;
+    height: auto !important;
+   
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1197px) {
+  .imageSuraj {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .imageSuraj {
+    width: 98% !important;
+    height: auto !important;
+  }
+} */

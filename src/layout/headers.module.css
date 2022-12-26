@@ -1,0 +1,107 @@
+@media (min-width: 1067px) {
+  .loginButton {
+    margin-left: 4rem !important;
+    /* background-color: pink; */
+  }
+}
+@media (min-width: 992px) and (max-width: 1067px) {
+  .wsmenu {
+    width: 75%;
+    margin-right: 50px;
+    /* background-color: pink; */
+    /* background-color: black !important; */
+  }
+
+  nav .loginButton {
+    margin-left: 2px;
+    margin-right: 5rem;
+    position: relative;
+  }
+  .getStartedLi {
+    margin-left: 1rem;
+    /* background-color: pink; */
+  }
+}
+
+@media screen and (min-device-width: 1219px) and (max-device-width: 1400px) {
+  .logoDesktop {
+    /* background-color: black !important; */
+    margin-left: 8.8rem;
+  }
+}
+
+@media screen and (min-device-width: 1210px) and (max-device-width: 1219px) {
+  .logoDesktop {
+    /* background-color: pink !important; */
+    /* margin-left: 6rem; */
+    /* margin-left: 105%; */
+    margin-left: 8rem;
+  }
+}
+
+@media screen and (min-device-width: 1160px) and (max-device-width: 1210px) {
+  .logoDesktop {
+    /* background-color: orange !important; */
+    /* margin-left: 6rem; */
+    /* margin-left: 105%; */
+    margin-left: 11rem;
+  }
+  .menuMainDiv {
+    /* background-color: pink; */
+    width: 100% !important;
+
+    /* margin-left: 6rem !important; */
+  }
+}
+
+@media screen and (min-device-width: 1123px) and (max-device-width: 1160px) {
+  .logoDesktop {
+    /* background-color: blue !important; */
+    /* margin-left: 6rem; */
+    margin-left: 53%;
+  }
+}
+@media screen and (min-device-width: 1090px) and (max-device-width: 1123px) {
+  .logoDesktop {
+    /* background-color: blue !important; */
+    /* margin-left: 6rem; */
+    margin-left: 30%;
+  }
+}
+
+@media screen and (min-device-width: 910px) and (max-device-width: 990px) {
+  .mobileLogo {
+    /* background-color: blue !important; */
+    /* margin-left: 6rem; */
+    margin-left: 15%;
+  }
+}
+
+@media screen and (min-device-width: 870px) and (max-device-width: 910px) {
+  .mobileLogo {
+    /* background-color: orange !important; */
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (max-device-width: 910px) {
+  .mobileLogo {
+    margin-left: 1rem;
+  }
+}
+
+/* 
+  .wsmainwp
+  {
+    background-color: blue !important;
+  } */
+
+@media (min-device-width: 1400px) {
+  .logoDesktop {
+    margin-left: 3.2rem;
+    /* height: 200px; */
+    height: 50%;
+    object-fit: contain;
+    /* background-color: pink; */
+  }
+}
