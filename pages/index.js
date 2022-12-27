@@ -1,17 +1,6 @@
-import Link from "next/dist/client/link";
-import { useEffect } from "react";
-import { scroll } from "../src/utils/utils";
 import Demo1 from "./demo-1";
-
 import Features from "../src/components/Features";
-import Demo16hero16 from "../src/components/olmo/demo16/Demo16hero16";
-import Demo10content5 from "../src/components/olmo/demo10/Demo10content5";
-import Demo4features3 from "../src/components/olmo/demo4/Demo4features3";
-
-import Demo4cta10 from "../src/components/olmo/demo4/Demo4cta10";
 import Demo1content3 from "../src/components/olmo/demo1/Demo1content3";
-import Demo1content33 from "../src/components/olmo/demo1/Demo1content33b";
-
 import Demo1content33a from "../src/components/olmo/demo1/Demo1content33a";
 import Demo1content33b from "../src/components/olmo/demo1/Demo1content33b";
 
@@ -20,11 +9,8 @@ import Demo1content33b from "../src/components/olmo/demo1/Demo1content33b";
 import Demo11content9 from "../src/components/olmo/demo11/Demo11content9";
 import Demo11features4 from "../src/components/olmo/demo11/Demo11features4";
 import Demo14content7 from "../src/components/olmo/demo14/Demo14content7";
-import Demo7reviews3 from "../src/components/olmo/demo7/Demo7reviews3";
-import Demo5cta11 from "../src/components/olmo/demo5/Demo5cta11";
 import Footer from "../src/layout/Footer";
 import { NextSeo } from "next-seo";
-import Demo2brands2 from "../src/components/olmo/demo2/Demo2brands2";
 
 import CustomersReviews from "../src/components/CustomersReviews"
 import Demo2features4 from "../src/components/olmo/demo2/Demo2features4";

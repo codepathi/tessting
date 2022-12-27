@@ -50,7 +50,7 @@ const Demo1Hero1 = () => {
                 />
               </h3>
               <p className={styles.theparagraph} style={{marginTop: "-20px"}}>
-                Perform all the operations of your restaurant just <br></br> by using a
+                Perform every the operations of your restaurant just <br></br> by using a
                 single app in RestroX
                 <br className="d-none d-xs-block" />
               </p>
