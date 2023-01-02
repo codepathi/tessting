@@ -3,43 +3,44 @@ import { Col, Row, Button } from "react-bootstrap";
 import ReactTypingEffect from "react-typing-effect";
 import Link from "next/link";
 import cn from "classnames";
-import { useState } from "react";
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import { countryContext } from "../../../context/countryContext";
+import axios from "axios";
 
 const Demo1Hero1 = (country) => {
   
   const {isNepal} = useContext(countryContext);
+  const [countryList, setCountryList] = useState({})
   
+  useEffect(()=>{
+  axios.get("https://gist.githubusercontent.com/keeguon/2310008/raw/bdc2ce1c1e3f28f9cab5b4393c7549f38361be4e/countries.json")
+  .then((res)=>{
+    console.log(res.data)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
 
+  }, [])
+  
   return (
-
     <section id="hero-1" className="bg-scroll hero-section" >
       <div className="container">
         {/* <div className="row d-flex  align-items-center"> */}
         <div className={cn(styles.flexing,"row   align-items-center")}>
 
 
-        {/* HERO IMAGE */}
-        <div className="col-md-5 col-lg-6">
-            <div className="hero-1-img wow fadeInLeft">
-              <img
-                className="img-fluid"
-                // src="/images/hero-1-img.png"
-                // src="HomePageImages/image-1-home-8.png"
-                // src="RestroXNewImages/pngfile/image-1-home.png"
-                // src="RestroXNewImages/image-home-latest.png"
-                src="images/img-02.png"
-                alt="RestroX QR Scan and Digital Menu"
-                style={{width: "80%"}}
-              />
-            </div>
-          </div>
+        
 
 
 
           {/* HERO TEXT */}
           <div className="col-md-7 col-lg-6">
+            
+            <select name="country" id="country">
+              <option value="nepal">Nepal</option>
+            </select>
+
             <div className={styles.thecontent}>
               <h3 className={styles.thetitle}>
                 Stop waiting. <br />
@@ -89,7 +90,7 @@ const Demo1Hero1 = (country) => {
                           target="_blank"
                         >
                           {/* Change button text depending on country  */}
-                          {isNepal ? <>Get Started</> 
+                          {isNepal ? <>Suru garnus</> 
                         :(<>Get started</>)}
                         </a>
                       </div>
@@ -98,7 +99,7 @@ const Demo1Hero1 = (country) => {
                     {/* </form> */}
                   </div>
                   <p className={styles.paragraphLets} style={{marginTop: "-5px"}}>
-                    Free forever & free trial
+                    Free forever, no credit card
                     {/* <Link to="/innerpage/terms">Terms & Conditions.</Link> */}
                   </p>
                 </Col>
@@ -106,6 +107,23 @@ const Demo1Hero1 = (country) => {
             </div>
           </div>
           {/* END HERO TEXT */}
+
+          {/* HERO IMAGE */}
+        <div className="col-md-5 col-lg-6">
+
+<div className="hero-1-img wow fadeInLeft">
+  <img
+    className="img-fluid"
+    // src="/images/hero-1-img.png"
+    // src="HomePageImages/image-1-home-8.png"
+    // src="RestroXNewImages/pngfile/image-1-home.png"
+    // src="RestroXNewImages/image-home-latest.png"
+    src="images/web_banner_restrox.png"
+    alt="RestroX QR Scan and Digital Menu"
+    style={{width: "100%"}}
+  />
+</div>
+</div>
           
         </div>
         {/* End row */}

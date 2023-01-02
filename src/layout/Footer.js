@@ -5,7 +5,11 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
+import { countryContext } from "../context/countryContext";
+import { useContext } from "react";
+
 const Footer = () => {
+  const {isNepal} = useContext(countryContext);
   return (
     <footer id="footer-1" className="footer division">
       <div className="container">
@@ -117,12 +121,14 @@ const Footer = () => {
                 </li>
                 <li>
                   <p>
-                    <a
-                      href="https://www.instagram.com/restrox_/"
-                      target="_blank"
-                    >
-                      <FaInstagram />
-                    </a>
+
+                  {isNepal ? <a href="https://www.instagram.com/restrox.nepal/" target="_blank">
+                    <FaInstagram />
+                  </a>
+                        :(<a href="https://www.instagram.com/restrox_/" target="_blank">
+                        <FaInstagram />
+                      </a>)}
+                
                   </p>
                 </li>
                 <li>
