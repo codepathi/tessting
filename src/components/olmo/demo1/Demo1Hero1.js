@@ -10,12 +10,10 @@ import countryList from "../../../../public/CountryData/country.json";
 const Demo1Hero1 = (country) => {
   
   const {isNepal, countryCodeContext, setCountryCodeContext, setIsNepal} = useContext(countryContext);
-  const [value, setValue] = useState('US')
+  const [value, setValue] = useState()
 
   useEffect(()=> {
-    const timeoutId = setTimeout(() => {
-      setValue('NP')
-    }, 1000)
+      setValue(countryCodeContext)
   }, [])
  
 
@@ -43,7 +41,7 @@ const Demo1Hero1 = (country) => {
 
           {/* HERO TEXT */}
           <div className="col-md-7 col-lg-6">
-            {value ? <select value={value} name="country" id="country" onChange={changeCountry}>
+            <select value={value} name="country" id="country" onChange={changeCountry}>
             {
               countryList.map((country)=>{
                 return(
@@ -51,7 +49,7 @@ const Demo1Hero1 = (country) => {
                 )
               })
             }
-          </select> : (<></>)}
+          </select>
           
          
           {countryCodeContext? <img src={`https://flagcdn.com/h40/${countryCodeContext.toLowerCase()}.png`} alt="Andorra flag"/> : (<></>)}
