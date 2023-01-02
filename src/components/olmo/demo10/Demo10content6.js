@@ -2,7 +2,7 @@ const Demo10content6 = () => {
   return (
     <section
       id="content-6"
-      className="content-6 bg-whitesmoke-gradient wide-60 content-section division"
+      className="content-6 wide-60 content-section division"
     >
       <div className="container">
         <div className="row d-flex align-items-center">

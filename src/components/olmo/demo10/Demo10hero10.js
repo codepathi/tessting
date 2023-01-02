@@ -7,11 +7,12 @@ const Demo10hero10 = () => {
         <div className="row d-flex align-items-center">
           <div className="col text-center">
             {/* HERO TEXT */}
-            <div className="hero-10-txt">
+            <div className="hero-10-txt" style={{marginTop: "-80px"}}>
               {/* Title */}
               <h2 className="h2-md wow fadeInUp">
                 The integration of information, design, and technology
               </h2>
+              <p style={{marginTop: "-20px"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi adipisci eius tempora nesciunt ex? Iure, quia nemo aliquam eum quis.</p>
               {/* Buttons Group */}
               <div className="btns-group wow fadeInUp">
                 <a

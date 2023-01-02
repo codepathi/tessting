@@ -3,12 +3,17 @@ import { Col, Row, Button } from "react-bootstrap";
 import ReactTypingEffect from "react-typing-effect";
 import Link from "next/link";
 import cn from "classnames";
+import { useState } from "react";
+import { useEffect, useContext } from "react";
+import { countryContext } from "../../../context/countryContext";
 
-const Demo1Hero1 = () => {
+const Demo1Hero1 = (country) => {
+  
+  const {isNepal} = useContext(countryContext);
+  
+
   return (
-    // <section id="hero-1" className="bg-scroll hero-section division">
-    // <section id="hero-1" className="bg-scroll hero-section "> *
-    // <section id="" className="bg-scroll hero-section" style={{marginTop:"4rem"}}>
+
     <section id="hero-1" className="bg-scroll hero-section" >
       <div className="container">
         {/* <div className="row d-flex  align-items-center"> */}
@@ -50,8 +55,12 @@ const Demo1Hero1 = () => {
                 />
               </h3>
               <p className={styles.theparagraph} style={{marginTop: "-20px"}}>
-                Perform all the operations of your restaurant just <br></br> by using a
-                single app in RestroX
+                {/* Change text depending on country  */}
+              {isNepal ? <>Perform all the operations of your restaurant just <br></br> by using a
+                single app in RestroX from Nepal</> 
+                :(<>Perform all the operations of your restaurant just <br></br> by using a
+                single app in RestroX from elsewhere</>)}
+                
                 <br className="d-none d-xs-block" />
               </p>
               {/* Newsletter */}
@@ -79,7 +88,9 @@ const Demo1Hero1 = () => {
                           className="btn btn-green tra-white-hover mr-15"
                           target="_blank"
                         >
-                          Get Started
+                          {/* Change button text depending on country  */}
+                          {isNepal ? <>Get Started</> 
+                        :(<>Get started</>)}
                         </a>
                       </div>
                     {/* </Link> */}
@@ -87,7 +98,7 @@ const Demo1Hero1 = () => {
                     {/* </form> */}
                   </div>
                   <p className={styles.paragraphLets} style={{marginTop: "-5px"}}>
-                    Free forever, no credit card
+                    Free forever & free trial
                     {/* <Link to="/innerpage/terms">Terms & Conditions.</Link> */}
                   </p>
                 </Col>

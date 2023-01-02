@@ -3,8 +3,14 @@ import Slider from "react-slick";
 import Layout from "../src/layout/Layout";
 import Footer from "../src/layout/Footer";
 import { NextSeo } from "next-seo";
+import { countryContext } from "../src/context/countryContext";
+import { useContext } from "react";
 
 const pricing = () => {
+
+  // Importing context with true value if Nepal
+  const {isNepal} = useContext(countryContext);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -135,11 +141,21 @@ const pricing = () => {
                       <h5 className="h5-xs">Premium</h5>
                     </div>
                     {/* Price */}
-                    <sup className="dark-color">$</sup>
+
+                    {isNepal ? 
+                    <>
+                    <sup className="dark-color">Rs</sup>
+                    <span className="dark-color">15,000</span>
+                    <sup className="validity dark-color">
+                      {/* <span>.25</span> */}/ year
+                    </sup>
+                    </> : 
+                    (<><sup className="dark-color">$</sup>
                     <span className="dark-color">19</span>
                     <sup className="validity dark-color">
                       {/* <span>.25</span> */}/ month
-                    </sup>
+                    </sup></>)}
+                    
                     {/* <p className="p-md">Billed as $135 per year</p> */}
                   </div>
                   {/* Plan Features  */}

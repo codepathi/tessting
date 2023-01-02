@@ -13,6 +13,8 @@ import PreLoader from "../src/layout/PreLoader";
 import Script from "next/script";
 import * as gtag from "../lib/gtag";
 
+import { CountryProvider } from "../src/context/countryContext";
+
 function MyApp({ Component, pageProps }) {
   const [preloader, setPreloader] = useState(true);
 
@@ -57,6 +59,7 @@ function MyApp({ Component, pageProps }) {
     `}
       </Script>
 
+      <CountryProvider>
       <VideoState>
         <Head>
           <title>RestroX | Restaurant Operating System </title>
@@ -66,6 +69,7 @@ function MyApp({ Component, pageProps }) {
         {preloader && <PreLoader />}
         <Component {...pageProps} />
       </VideoState>
+      </CountryProvider>
     </>
   );
 }

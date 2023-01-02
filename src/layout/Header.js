@@ -237,7 +237,7 @@ const Header = ({
                 <li className="nl-simple clearfix">
                   {/* <Link href={`${singlePage ? "/faqs" : "#faqs-2"}`}>About Us</Link> */}
 
-                  <a style={{ color: "#2C3E50" }} href="/aboutus">
+                  <a style={{ color: "#2C3E50" }} href="/abouts">
                     About Us
                   </a>
                 </li>

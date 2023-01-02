@@ -34,7 +34,7 @@ const VideoImage = ({ id, img, extraClass }) => {
 
         style={{ borderRadius: "2rem",width:"80%",height:"60%" }}
         // src={img ? img : "images/dashboard-07.png"}
-        src={img ? img : "assets/medias/restrox-youtube-thumnail.png"}
+        src={img ? img : "assets/medias/restrox-youtube-thumnail-2.png"}
         alt="RestroX Youtube Video Thumbnail "
       />
     </Fragment>
