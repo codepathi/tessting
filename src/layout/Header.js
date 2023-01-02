@@ -40,9 +40,11 @@ const Header = ({
             //  className={cn(styles.logo,"smlllogo")}
           >
             <img
+            
               src="logo/RestroXLogo.png"
               alt="RestroX-logo-mobile-logo m"
               className={styles.mobileLogo}
+              
             />
           </span>
           <a
@@ -64,6 +66,7 @@ const Header = ({
                     src="logo/RestroXLogo.png"
                     alt="RestroX-logo-desktop-logo"
                     className={styles.logoDesktop}
+                    style={{width: "60%"}}
                   />
                 </a>
               </Link>

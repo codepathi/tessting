@@ -5,23 +5,35 @@ import Link from "next/link";
 import cn from "classnames";
 import { useEffect, useContext, useState } from "react";
 import { countryContext } from "../../../context/countryContext";
-import axios from "axios";
+import countryList from "../../../../public/CountryData/country.json";
 
 const Demo1Hero1 = (country) => {
   
-  const {isNepal} = useContext(countryContext);
-  const [countryList, setCountryList] = useState({})
-  
-  useEffect(()=>{
-  axios.get("https://gist.githubusercontent.com/keeguon/2310008/raw/bdc2ce1c1e3f28f9cab5b4393c7549f38361be4e/countries.json")
-  .then((res)=>{
-    console.log(res.data)
-  })
-  .catch((err)=>{
-    console.log(err)
-  })
+  const {isNepal, countryCodeContext, setCountryCodeContext, setIsNepal} = useContext(countryContext);
+  const [value, setValue] = useState('US')
 
+  useEffect(()=> {
+    const timeoutId = setTimeout(() => {
+      setValue('NP')
+    }, 1000)
   }, [])
+ 
+
+  // Change country according to select statement
+  const changeCountry = (e) => {
+    const countryCode = e.target.value
+    setCountryCodeContext(e.target.value)
+    setValue(e.target.value)
+
+    // Set isNepal = false if other selected
+    if(countryCodeContext != 'NP') {
+      setIsNepal(undefined)
+    }
+    else{
+      setIsNepal(true)
+    }
+  }
+  
   
   return (
     <section id="hero-1" className="bg-scroll hero-section" >
@@ -29,17 +41,20 @@ const Demo1Hero1 = (country) => {
         {/* <div className="row d-flex  align-items-center"> */}
         <div className={cn(styles.flexing,"row   align-items-center")}>
 
-
-        
-
-
-
           {/* HERO TEXT */}
           <div className="col-md-7 col-lg-6">
-            
-            <select name="country" id="country">
-              <option value="nepal">Nepal</option>
-            </select>
+            {value ? <select value={value} name="country" id="country" onChange={changeCountry}>
+            {
+              countryList.map((country)=>{
+                return(
+                <option value={country.code}>{country.name}</option>
+                )
+              })
+            }
+          </select> : (<></>)}
+          
+         
+          {countryCodeContext? <img src={`https://flagcdn.com/h40/${countryCodeContext.toLowerCase()}.png`} alt="Andorra flag"/> : (<></>)}
 
             <div className={styles.thecontent}>
               <h3 className={styles.thetitle}>
