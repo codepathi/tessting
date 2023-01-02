@@ -18,7 +18,7 @@ const Demo14content7 = () => {
               <p className="p-lg">
                 Get all the that you need to know
                 about the functioning of your restaurant in real-time that you can view anywhere,
-                at any time by just using an app
+                at any time by just using an app.
               </p>
               {/* TEXT BOX */}
               <div className="txt-box">

@@ -6,7 +6,7 @@ const Demo1content3_about = () => {
       >
         <div className="container">
           {/* TOP ROW */}
-          <div className="top-row pb-50">
+          <div className="top-row">
             <div className="row d-flex align-items-center">
               {/* IMAGE BLOCK */}
               <div className="col-md-5 col-lg-6">

@@ -15,25 +15,22 @@ const Demo2content5 = () => {
                   Fast Performance
                 </span>
                 {/* Title */}
-                <h2 className="h2-xs">Committed to top quality and results</h2>
+                <h2 className="h2-xs">Work Smarter with Powerful features</h2>
                 {/* List */}
                 <ul className="simple-list">
                   <li className="list-item">
                     <p className="p-lg">
-                      Fringilla risus, luctus mauris auctor euismod an iaculis
-                      luctus magna purus pretium ligula purus and quaerat sapien
-                      rutrum mauris auctor
+                    Trust your account with us. Access your entire transaction history with confidence knowing you’re protected by first-class payment security.
                     </p>
                   </li>
                   <li className="list-item">
                     <p className="p-lg">
-                      Quaerat sodales sapien euismod purus blandit
+                    Tailored perfectly for your every need. You can manage your customer's order sources in one system compatible with cross-platform use.
                     </p>
                   </li>
                   <li className="list-item">
                     <p className="p-lg">
-                      Nemo ipsam egestas volute turpis dolores ligula and
-                      aliquam quaerat at sodales sapien purus
+                    Order from your phone, and customize your menu. Enhance your guest experience with a digital menu or QR Menu solutions to satisfy your guests with an excellent and always up-to-date menu
                     </p>
                   </li>
                 </ul>

@@ -15,9 +15,9 @@ const Demo2content5_2 = () => {
                   Fast Performance
                 </span>
                 {/* Title */}
-                <h2 className="h2-xs">Committed to top quality and results</h2>
+                <h2 className="h2-xs">Don't miss out on the opportunity to expand your business and take it to new heights!</h2>
                 {/* List */}
-                <ul className="simple-list">
+                {/* <ul className="simple-list">
                   <li className="list-item">
                     <p className="p-lg">
                       Fringilla risus, luctus mauris auctor euismod an iaculis
@@ -36,7 +36,7 @@ const Demo2content5_2 = () => {
                       aliquam quaerat at sodales sapien purus
                     </p>
                   </li>
-                </ul>
+                </ul> */}
 
                 {/* STORE BADGES */}
               <div className="stores-badge">

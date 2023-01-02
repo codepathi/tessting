@@ -12,31 +12,26 @@ const Demo2content6 = () => {
               {/* TEXT BOX */}
               <div className="txt-box mb-30">
                 {/* Title */}
-                <h5 className="h5-lg">Editing Tools and Exports</h5>
+                <h5 className="h5-lg">Manage and create your digital menu</h5>
                 {/* Text */}
                 <p className="p-lg">
-                  Quaerat sodales sapien euismod blandit undo vitae ipsum primis
-                  and cubilia a laoreet augue and luctus magna dolor egestas
-                  luctus
+                Enhance your customer experience with QR and digital menu solutions. Get built-in menu templates and customize your menus according to your specials. Take orders, make reservations and manage your menu.
                 </p>
               </div>
               {/* TEXT BOX */}
               <div className="txt-box">
                 {/* Title */}
-                <h5 className="h5-lg">Multiplatform. Always Synced</h5>
+                <h5 className="h5-lg">Increase your restaurant's efficiency with a Digital menu</h5>
                 {/* List */}
                 <ul className="simple-list">
                   <li className="list-item">
                     <p className="p-lg">
-                      Fringilla risus, luctus mauris an auctor purus euismod
-                      iaculis luctus magna purus pretium ligula and quaerat
-                      luctus magna
+                    Get to know where your guests are ordering from when they scan the QR code.
                     </p>
                   </li>
                   <li className="list-item">
                     <p className="p-lg">
-                      Nemo ipsam egestas volute turpis dolores undo ultrice
-                      aliquam quaerat sodales
+                    Get digitized with your menu. No need for a printed or physical menu as it is easy to just scan the QR code.
                     </p>
                   </li>
                 </ul>

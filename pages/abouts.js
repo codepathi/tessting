@@ -11,6 +11,7 @@ import Demo10content6 from "../src/components/olmo/demo10/Demo10content6";
 import Demo10content7 from "../src/components/olmo/demo10/Demo10content7";
 import Demo10cta11 from "../src/components/olmo/demo10/Demo10cta11";
 import Demo10features4 from "../src/components/olmo/demo10/Demo10features4";
+import Demo15features7 from "../src/components/olmo/demo15/Demo15features7";
 import Demo10hero10 from "../src/components/olmo/demo10/Demo10hero10";
 import Demo10newsletter2 from "../src/components/olmo/demo10/Demo10newsletter2";
 import Demo10reviews4 from "../src/components/olmo/demo10/Demo10reviews4";
@@ -33,7 +34,7 @@ const Demo10 = () => {
       <Demo10features4 />
       <Demo2content5_3 />
       <Demo1content3_about />
-      <Demo1content3_about_2 />     
+      <Demo15features7 />  
       
       {/* <Demo10content6 /> */}
       {/* <Faq /> */}

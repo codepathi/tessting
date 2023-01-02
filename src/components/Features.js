@@ -25,23 +25,7 @@ const Features = () => {
                 requirements from orders, billings, sales, inventory, staff,
                 social media, and accounting management in a single system.
 
-                <ul className="simple-list">
-                  <li className="list-item">
-                    <p className="p-lg">
-                    <b>Best for operation:</b> Operate your restaurant from the menu to inventory, staffing to department, social media to reviews, and many more.
-                    </p>
-                  </li>
-                  <li className="list-item">
-                    <p className="p-lg">
-                    <span>Best for operation:</span> Operate your restaurant from the menu to inventory, staffing to department, social media to reviews, and many more.
-                    </p>
-                  </li>
-                  <li className="list-item">
-                    <p className="p-lg">
-                    <b>Best for operation:</b> Operate your restaurant from the menu to inventory, staffing to department, social media to reviews, and many more.
-                    </p>
-                  </li>
-                </ul>
+                
               </p>
             </div>
           </div>

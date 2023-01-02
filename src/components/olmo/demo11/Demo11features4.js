@@ -168,7 +168,7 @@ const Demo11features4 = () => {
                   <p className="p-lg">
                     Setting up and managing your inventory is easier than ever.
                     Manage your stocks. Keep track of your purchase invoice and
-                    suppliers
+                    suppliers.
                   </p>
                 </div>
               </div>
