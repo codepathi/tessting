@@ -8,51 +8,21 @@ import { countryContext } from "../../../context/countryContext";
 import countryList from "../../../../public/CountryData/country.json";
 
 const Demo1Hero1 = (country) => {
+
   
   const {isNepal, countryCodeContext, setCountryCodeContext, setIsNepal} = useContext(countryContext);
-  const [value, setValue] = useState()
 
-  useEffect(()=> {
-      setValue(countryCodeContext)
-  }, [])
- 
-
-  // Change country according to select statement
-  const changeCountry = (e) => {
-    const countryCode = e.target.value
-    setCountryCodeContext(e.target.value)
-    setValue(e.target.value)
-
-    // Set isNepal = false if other selected
-    if(countryCodeContext != 'NP') {
-      setIsNepal(undefined)
-    }
-    else{
-      setIsNepal(true)
-    }
-  }
   
   
   return (
     <section id="hero-1" className="bg-scroll hero-section" >
       <div className="container">
+
         {/* <div className="row d-flex  align-items-center"> */}
         <div className={cn(styles.flexing,"row   align-items-center")}>
 
           {/* HERO TEXT */}
           <div className="col-md-7 col-lg-6">
-            <select value={value} name="country" id="country" onChange={changeCountry}>
-            {
-              countryList.map((country)=>{
-                return(
-                <option value={country.code}>{country.name}</option>
-                )
-              })
-            }
-          </select>
-          
-         
-          {countryCodeContext? <img src={`https://flagcdn.com/h40/${countryCodeContext.toLowerCase()}.png`} alt="Andorra flag"/> : (<></>)}
 
             <div className={styles.thecontent}>
               <h3 className={styles.thetitle}>

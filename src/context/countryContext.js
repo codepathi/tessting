@@ -7,7 +7,7 @@ export const countryContext = createContext();
 export const CountryProvider = (props) => {
 
         const [isNepal, setIsNepal] = useState();
-        const [countryCodeContext, setCountryCodeContext] = useState();
+        const [countryCodeContext, setCountryCodeContext] = useState()
 
         //Get country symbol
         useEffect(()=> {

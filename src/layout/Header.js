@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { scroll } from "../utils/utils";
 import styles from "./headers.module.css";
 import cn from "classnames";
+import { countryContext } from "../context/countryContext";
+import countryList from "../../public/CountryData/country.json";
 
 const Header = ({
   navLight,
@@ -12,6 +14,24 @@ const Header = ({
   navHoverColor,
   singlePage,
 }) => {
+
+  //Import contexts 
+  const {isNepal, countryCodeContext, setCountryCodeContext, setIsNepal} = useContext(countryContext);
+  
+   // Change country according to select statement
+   const changeCountry = (e) => {
+    const countryCode = e.target.value
+    setCountryCodeContext(e.target.value)
+
+    // Set isNepal = false if other selected
+    if(countryCode != 'NP') {
+      setIsNepal(undefined)
+    }
+    else{
+      setIsNepal(true)
+    }
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", scroll);
   }, []);
@@ -268,27 +288,33 @@ const Header = ({
                 </li>
 
                 {/* HEADER BUTTON */}
-                <li className="nl-simple getStartedLi">
-                  {/* <Link href={`${singlePage ? "/pricing" : "#content-4"}`}> */}
-                  {/* <Link href="https:/app.restrox.co/register"> */}
-                  <Link href="https://app.restrox.co/register">
+                <li className="nl-simple">
+                  
                     <a
-                      style={{ color: "#da0819" }}
                       target="_blank"
-                      className={`btn ${
-                        btnCustomHover
-                          ? btnCustomHover
-                          : "btn-tra-white orange-red-hover"
-                      } last-link`}
+                      className={`btn
+                      }`}
                     >
-                      {getStartText ? "Get Started" : "Get Sarted"}
-                    </a>
+
+            {/* Select country  */}
+            <select style={{maxWidth: "80px", border: "none", fontSize: "0.8em"}} value={countryCodeContext} name="country" id="country" onChange={changeCountry}>
+            {
+              countryList.map((country)=>{
+                return(
+                <option value={country.code}>{country.name}</option>
+                )
+              })
+            }
+          </select>
+
+          {countryCodeContext? <img style={{width: "25px", marginLeft: "8px"}} src={`https://flagcdn.com/w40/${countryCodeContext.toLowerCase()}.png`} alt="Andorra flag"/> : (<></>)}
+          </a>
+          
                     {/* className={`btn ${ }
                          btnCustomHover
                           ? btnCustomHover
                            : "btn-tra-white orange-red-hover"
                        } last-link`} */}
-                  </Link>
                 </li>
 
                 {/* HEADER SOCIAL LINKS 													
