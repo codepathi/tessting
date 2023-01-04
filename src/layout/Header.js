@@ -4,33 +4,40 @@ import { scroll } from "../utils/utils";
 import styles from "./headers.module.css";
 import cn from "classnames";
 import { countryContext } from "../context/countryContext";
-import countryList from "../../public/CountryData/country.json";
+// import countryList from "../../public/CountryData/country.json";
+import Popup from "../../pages/popup";
 
 const Header = ({
   navLight,
-  whiteLogo,
-  getStartText,
-  btnCustomHover,
   navHoverColor,
-  singlePage,
 }) => {
+
+
+  //Set country select popup state
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const openPopup = ()=> {
+    setIsPopupOpen(true)
+  }
+  const closePopup = () => {
+    setIsPopupOpen(false)
+  }
 
   //Import contexts 
   const {isNepal, countryCodeContext, setCountryCodeContext, setIsNepal} = useContext(countryContext);
   
    // Change country according to select statement
-   const changeCountry = (e) => {
-    const countryCode = e.target.value
-    setCountryCodeContext(e.target.value)
+  //  const changeCountry = (e) => {
+  //   const countryCode = e.target.value
+  //   setCountryCodeContext(e.target.value)
 
-    // Set isNepal = false if other selected
-    if(countryCode != 'NP') {
-      setIsNepal(undefined)
-    }
-    else{
-      setIsNepal(true)
-    }
-  }
+  //   // Set isNepal = false if other selected
+  //   if(countryCode != 'NP') {
+  //     setIsNepal(undefined)
+  //   }
+  //   else{
+  //     setIsNepal(true)
+  //   }
+  // }
 
   useEffect(() => {
     window.addEventListener("scroll", scroll);
@@ -122,45 +129,7 @@ const Header = ({
                   </Link> */}
                 </li>
                 {/* END MEGAMENU */}
-                {/* DROPDOWN MENU */}
-                {/* <li>
-                  <span
-                    className={`wsmenu-click ${
-                      mobileMenuToggle === "about" ? "ws-activearrow" : ""
-                    }`}
-                    onClick={() => toggleMenu("about")}
-                  >
-                    <i className="wsmenu-arrow" />
-                  </span>
-                  <Link href={`${singlePage ? "/about" : "#"}`}>
-                    <a>About {!singlePage && <span className="wsarrow" />}</a>
-                  </Link>
-                  {!singlePage && (
-                    <ul
-                      className="sub-menu"
-                      style={{
-                        display: mobileMenuToggle === "about" ? "block" : "",
-                      }}
-                    >
-                      <li>
-                        <Link href="#content-2">Why OLMO?</Link>
-                      </li>
-                      <li>
-                        <Link href="#content-5">Best Solutions</Link>
-                      </li>
-                      <li>
-                        <Link href="#content-3">Integrations</Link>
-                      </li>
-                      <li>
-                        <Link href="#content-10">How It Works</Link>
-                      </li>
-                      <li>
-                        <Link href="#reviews-1">Testimonials</Link>
-                      </li>
-                    </ul>
-                  )}
-                </li> */}
-                {/* DROPDOWN MENU */}
+                
                 <li>
                   <span
                     className={`wsmenu-click ${
@@ -170,69 +139,9 @@ const Header = ({
                   >
                     {/* <i className="wsmenu-arrow" /> */}
                   </span>
-                  {/* <Link href="#">
-                    <a>
-                      Pages <span className="wsarrow" />
-                    </a>
-                  </Link> */}
-                  {/* <div
-                    className="wsmegamenu clearfix halfmenu"
-                    style={{
-                      display: mobileMenuToggle === "pages" ? "block" : "",
-                    }}
-                  >
-                    <div className="container-fluid">
-                      <div className="row">
-                        <ul className="col-lg-6 link-list">
-                          <li>
-                            <Link href="/about">About Us</Link>
-                          </li>
-                          <li>
-                            <Link href="/features">Features &amp; Addons</Link>
-                          </li>
-                          <li>
-                            <Link href="/pricing">Pricing Packages</Link>
-                          </li>
-                          <li>
-                            <Link href="/download">Download Page</Link>
-                          </li>
-                          <li>
-                            <Link href="/projects">Our Projects</Link>
-                          </li>
-                          <li>
-                            <Link href="/project-details">Project Details</Link>
-                          </li>
-                        </ul>
-                      
-                        <ul className="col-lg-6 link-list">
-                          <li>
-                            <Link href="/team">Meet The Team</Link>
-                          </li>
-                          <li>
-                            <Link href="/faqs">FAQs Page</Link>
-                          </li>
-                          <li>
-                            <Link href="/blog-listing">Blog Listing</Link>
-                          </li>
-                          <li>
-                            <Link href="/single-post">Single Blog Post</Link>
-                          </li>
-                          <li>
-                            <Link href="/terms">Terms &amp; Privacy</Link>
-                          </li>
-                          <li>
-                            <Link href="/contacts">Contact Us</Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div> */}
+                  
                 </li>
-                {/* END DROPDOWN MENU */}
-                {/* SIMPLE NAVIGATION LINK */}
                 <li className="nl-simple">
-                  {/* <Link href={`${singlePage ? "/features" : "#features-8"}`} > */}
-                  {/* <Link> */}
                   <a
                     style={{ color: "#2C3E50" }}
                     onClick={() => window.location.reload(true)}
@@ -250,11 +159,11 @@ const Header = ({
 
                 {/* SIMPLE NAVIGATION LINK */}
                 <li className="nl-simple">
-                  {/* <Link > */}
+                  <Link href="/pricing">
                   <a style={{ color: "#2C3E50" }} href="/pricing">
                     Pricing
                   </a>
-                  {/* </Link> */}
+                  </Link>
                 </li>
                 {/* SIMPLE NAVIGATION LINK */}
                 <li className="nl-simple clearfix">
@@ -271,10 +180,7 @@ const Header = ({
                     Contact Us
                   </a>
                 </li>
-                {/* <li className="nl-simple "> */}
                 <li className={styles.loginButton}>
-                  {/* <Link href={`${singlePage ? "/faqs" : "#faqs-2"}`}>Contact Us</Link> */}
-                  {/* <Link href="https:/app.restrox.co/login"> */}
                   <Link href="https://app.restrox.co/login">
                     <a
                       // style={{ color: "#2C3E50", marginLeft: "8rem" }}
@@ -288,33 +194,26 @@ const Header = ({
                 </li>
 
                 {/* HEADER BUTTON */}
-                <li className="nl-simple">
+                <li className="nl-simple countryChangeDiv">
                   
                     <a
-                      target="_blank"
-                      className={`btn
-                      }`}
+                      style={{ color: "#2C3E50" }}
                     >
+                    <div onClick={openPopup} >
+                    {/* Country Change div, styling in popup.css */}
+                    <div className="changeCountryContainer">                    
+                    {countryCodeContext?<div className="flag" style={{backgroundImage: `url(https://flagcdn.com/h40/${countryCodeContext.toLowerCase()}.png)`}}>  </div>: (<div className="flag">  </div>)}                    
+                    <div className="divider">
+                    </div>
+                    <div className="sideArrow">
+                      &gt;
+                    </div>
+                    </div>
+                    </div>  
 
-            {/* Select country  */}
-            <select style={{maxWidth: "80px", border: "none", fontSize: "0.8em"}} value={countryCodeContext} name="country" id="country" onChange={changeCountry}>
-            {
-              countryList.map((country)=>{
-                return(
-                <option value={country.code}>{country.name}</option>
-                )
-              })
-            }
-          </select>
 
-          {countryCodeContext? <img style={{width: "25px", marginLeft: "8px"}} src={`https://flagcdn.com/w40/${countryCodeContext.toLowerCase()}.png`} alt="Andorra flag"/> : (<></>)}
-          </a>
-          
-                    {/* className={`btn ${ }
-                         btnCustomHover
-                          ? btnCustomHover
-                           : "btn-tra-white orange-red-hover"
-                       } last-link`} */}
+                    <Popup open={isPopupOpen} closePopup = {closePopup}/>
+                  </a>
                 </li>
 
                 {/* HEADER SOCIAL LINKS 													

@@ -1,6 +1,10 @@
 import Slider from "react-slick";
+import { useContext } from "react";
+import { countryContext } from "../context/countryContext";
 
 const CustomersReviews = () => {
+
+  const {isNepal} = useContext(countryContext);
   const settings = {
     dots: true,
     infinite: true,
@@ -45,7 +49,222 @@ const CustomersReviews = () => {
             </div>
           </div>
         </div>
-        {/* TESTIMONIALS CONTENT */}
+
+        {isNepal? 
+        // While browsing from Nepal 
+        <>
+        <div className="row">
+          <div className="col">
+            <div className="owl-carousel owl-theme reviews-1-wrapper">
+              <Slider {...settings}>
+                {/* TESTIMONIAL #1 */}
+                <div className="review-1">
+                  {/* Quote Icon */}
+                  <div className="review-1-ico ico-25">
+                    <span className="flaticon-left-quote" />
+                  </div>
+                  {/* Text */}
+                  <div className="review-1-txt">
+                    {/* Text */}
+                    <p className="p-lg">
+                    RestroX has been a great addition to our restaurant. The digital menu, quick ordering, and mobile app have all been very useful. Highly recommend.
+                    </p>
+                    {/* Testimonial Author */}
+                    <div className="author-data clearfix">
+                      {/* Testimonial Avatar */}
+                      <div className="review-avatar">
+                        <img
+                          src="/images/clientImg/sovit.png"
+                          alt="sovit"
+                        />
+                      </div>
+                      {/* Testimonial Author */}
+                      <div className="review-author">
+                        <h6 className="h6-xl">Sobit Thakuri</h6>
+                        <p className="p-md">Owner, Coffee Ghar</p>
+                        {/* Rating */}
+                        <div className="review-rating ico-15 yellow-color">
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-half-empty" />
+                        </div>
+                      </div>
+                    </div>
+                    {/* End Testimonial Author */}
+                  </div>
+                  {/* End Text */}
+                </div>
+                {/* END TESTIMONIAL #1 */}
+                {/* TESTIMONIAL #2 */}
+                <div className="review-1">
+                  {/* Quote Icon */}
+                  <div className="review-1-ico ico-25">
+                    <span className="flaticon-left-quote" />
+                  </div>
+                  {/* Text */}
+                  <div className="review-1-txt">
+                    {/* Text */}
+                    <p className="p-lg">
+                    RestroX has been a great addition to our restaurant. We've been using RestroX for a while now and are very happy with it. The staff app has made a big difference in our operations. Worth the cost.
+                    </p>
+                    {/* Testimonial Author */}
+                    <div className="author-data clearfix">
+                      {/* Testimonial Avatar */}
+                      <div className="review-avatar">
+                        <img
+                          src="/images/clientImg/Bikash.png"
+                          alt="review-avatar"
+                        />
+                      </div>
+                      {/* Testimonial Author */}
+                      <div className="review-author">
+                        <h6 className="h6-xl">Bikash Tiwari</h6>
+                        <p className="p-md">MD, Homeland Restaurant</p> <p>Lakeside Pokhara</p>
+                        {/* Rating */}
+                        <div className="review-rating ico-15 yellow-color">
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-half-empty" />
+                        </div>
+                      </div>
+                    </div>
+                    {/* End Testimonial Author */}
+                  </div>
+                  {/* End Text */}
+                </div>
+                {/* END TESTIMONIAL #2 */}
+                {/* TESTIMONIAL #3 */}
+                <div className="review-1">
+                  {/* Quote Icon */}
+                  <div className="review-1-ico ico-25">
+                    <span className="flaticon-left-quote" />
+                  </div>
+                  {/* Text */}
+                  <div className="review-1-txt">
+                    {/* Text */}
+                    <p className="p-lg">
+                    RestroX has been a great investment for our restaurant. We're using RestroX for a few months and it's made a big difference in our operations. The digital menu and quick ordering features are particularly helpful. Worth the cost.
+                    </p>
+                    {/* Testimonial Author */}
+                    <div className="author-data clearfix">
+                      {/* Testimonial Avatar */}
+                      <div className="review-avatar">
+                        <img
+                          src="/images/clientImg/sosiv.png"
+                          alt="review-avatar"
+                        />
+                      </div>
+                      {/* Testimonial Author */}
+                      <div className="review-author">
+                        <h6 className="h6-xl">Sosiv Burtel</h6>
+                        <p className="p-md">Owner, FoodBank Restro.</p>
+                        {/* Rating */}
+                        <div className="review-rating ico-15 yellow-color">
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-half-empty" />
+                        </div>
+                      </div>
+                    </div>
+                    {/* End Testimonial Author */}
+                  </div>
+                  {/* End Text */}
+                </div>
+                {/* END TESTIMONIAL #3 */}
+                {/* TESTIMONIAL #4 */}
+                <div className="review-1">
+                  {/* Quote Icon */}
+                  <div className="review-1-ico ico-25">
+                    <span className="flaticon-left-quote" />
+                  </div>
+                  {/* Text */}
+                  <div className="review-1-txt">
+                    {/* Text */}
+                    <p className="p-lg">
+                    We've been using RestroX for a while and are very happy with it. The staff app has helped us stay organized and the digital menu, quick ordering, and mobile app have all been useful. Highly recommend.
+                    </p>
+                    {/* Testimonial Author */}
+                    <div className="author-data clearfix">
+                      {/* Testimonial Avatar */}
+                      <div className="review-avatar">
+                        <img
+                          src="/images/clientImg/bimal.png"
+                          alt="review-avatar"
+                        />
+                      </div>
+                      {/* Testimonial Author */}
+                      <div className="review-author">
+                        <h6 className="h6-xl">Bimal Tiwari</h6>
+                        <p className="p-md">MD, Forest Villa</p><p> Lakeside Pokhara</p>
+                        {/* Rating */}
+                        <div className="review-rating ico-15 yellow-color">
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-half-empty" />
+                        </div>
+                      </div>
+                    </div>
+                    {/* End Testimonial Author */}
+                  </div>
+                  {/* End Text */}
+                </div>
+                {/* END TESTIMONIAL #4 */}
+                {/* TESTIMONIAL #5 */}
+                <div className="review-1">
+                  {/* Quote Icon */}
+                  <div className="review-1-ico ico-25">
+                    <span className="flaticon-left-quote" />
+                  </div>
+                  {/* Text */}
+                  <div className="review-1-txt">
+                    {/* Text */}
+                    <p className="p-lg">
+                    Great system Great support. The entire team has been great to work with. The system is fast and friendly. Will be recommending RestroX to my peers owning a restaurant!
+                    </p>
+                    {/* Testimonial Author */}
+                    <div className="author-data clearfix">
+                      {/* Testimonial Avatar */}
+                      <div className="review-avatar">
+                        <img
+                          src="/images/clientImg/prabin.png"
+                          alt="review-avatar"
+                        />
+                      </div>
+                      {/* Testimonial Author */}
+                      <div className="review-author">
+                        <h6 className="h6-xl">Prabin Nepali</h6>
+                        <p className="p-md">Owner, Bulldog Bar</p><p> Lakeside Pokhara</p>
+                        {/* Rating */}
+                        <div className="review-rating ico-15 yellow-color">
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-1" />
+                          <span className="flaticon-star-half-empty" />
+                        </div>
+                      </div>
+                    </div>
+                    {/* End Testimonial Author */}
+                  </div>
+                  {/* End Text */}
+                </div>
+                {/* END TESTIMONIAL #5 */}
+              </Slider>
+            </div>
+          </div>
+        </div>
+        </> 
+        :
+        // While Browsing from elsewhere 
+        (<>
         <div className="row">
           <div className="col">
             <div className="owl-carousel owl-theme reviews-1-wrapper">
@@ -294,6 +513,9 @@ const CustomersReviews = () => {
             </div>
           </div>
         </div>
+        </>)}
+        
+        
         {/* END TESTIMONIALS CONTENT */}
       </div>
       {/* End container */}

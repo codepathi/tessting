@@ -1,0 +1,45 @@
+.pricingcontainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.pricing{
+    display: flex;
+    gap: 5px;
+    background-color: rgb(232, 232, 232);
+    border-radius: 20px;
+    width: 30%;
+    justify-content: space-between;
+}
+.pricing span{
+    font-size: 10px;
+    width: 100%;
+}
+.pricing .selected{
+    background-color: rgb(226, 20, 20);
+    padding: 10px 7px;
+    border-radius: 20px;
+    color: white;
+}
+.pricing .unselected{
+    padding: 10px;
+    cursor: pointer;
+}
+.pricing-plan-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productFeatures{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.tick{
+    color: red;
+    margin-right: 5px;
+}

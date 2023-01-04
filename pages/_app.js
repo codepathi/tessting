@@ -4,6 +4,8 @@ import "../styles/globals.css";
 import "../public/demo/css/style.css";
 import "../src/styles/customstyles.css";
 import "../src/styles/demo4features3.css";
+import '../public/css/pricing.css'
+import '../public/css/popup.css'
 
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";

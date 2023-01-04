@@ -4,12 +4,17 @@ import Layout from "../src/layout/Layout";
 import Footer from "../src/layout/Footer";
 import { NextSeo } from "next-seo";
 import { countryContext } from "../src/context/countryContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 const pricing = () => {
 
   // Importing context with true value if Nepal
-  const {isNepal} = useContext(countryContext);
+  const {isNepal} = useContext(countryContext)
+  const [pricing, setPricing] = useState(undefined)
+
+  const changePricing = () => {
+    setPricing(!pricing)
+  }
 
   const settings = {
     dots: true,
@@ -71,11 +76,23 @@ const pricing = () => {
             <div className="col-lg-10 col-xl-8">
               <div className="section-title title-01 mb-80">
                 {/* Title */}
-                <h2 className="h2-md">Simple And Flexible Pricing</h2>
+                <h2 className="h2-md">Simple And Flexible <span style={{textDecoration: "Underline", color: "rgb(226, 20, 20)"}}>Pricing</span> </h2>
+                <h4 style={{color: "grey", margin: "20px 0"}} className="h4-md">No credit card required. Change or cancel your plan anytime.</h4>
                 {/* Text */}
-                <p className="p-xl">
-                  No credit card required. Change or cancel your plan anytime.
-                </p>
+                
+                  <div className="productFeatures">
+                  <span> <span className="tick">&#10003;</span> Get started in minutes </span> 
+                  <span><span className="tick">&#10003;</span> No credit card required </span> 
+                  <span><span className="tick">&#10003;</span> Free on-boarding support </span> 
+                  </div>
+                
+                
+                <div className="pricingcontainer">
+                <div className="pricing">
+                <span onClick={changePricing} className={pricing ? "selected" : ("unselected")}>Anuual</span>
+                <span onClick={changePricing} className={pricing ? "unselected" : ("selected")}>Monthly</span>
+                </div>
+                </div>
               </div>
             </div>
           </div>
@@ -142,19 +159,44 @@ const pricing = () => {
                     </div>
                     {/* Price */}
 
+                    {/* If nepal is set show pricing in Rs  */}
                     {isNepal ? 
+                    <>
+                    {pricing ? 
                     <>
                     <sup className="dark-color">Rs</sup>
                     <span className="dark-color">15,000</span>
                     <sup className="validity dark-color">
                       {/* <span>.25</span> */}/ year
                     </sup>
-                    </> : 
-                    (<><sup className="dark-color">$</sup>
-                    <span className="dark-color">19</span>
+                    </>
+                    :
+                    (<>
+                    <sup className="dark-color">Rs</sup>
+                    <span className="dark-color">5,000</span>
                     <sup className="validity dark-color">
                       {/* <span>.25</span> */}/ month
-                    </sup></>)}
+                    </sup>
+                    </>)}
+                    
+                    </> :
+
+                    (<>
+                    {pricing ? <>
+                      <sup className="dark-color">$</sup>
+                    <span className="dark-color">2,000</span>
+                    <sup className="validity dark-color">
+                      {/* <span>.25</span> */}/ year
+                    </sup>
+                    </> :
+                     (<>
+                     <sup className="dark-color">$</sup>
+                    <span className="dark-color">500</span>
+                    <sup className="validity dark-color">
+                      {/* <span>.25</span> */}/ monthly
+                    </sup>
+                     </>) }
+                    </>)}
                     
                     {/* <p className="p-md">Billed as $135 per year</p> */}
                   </div>

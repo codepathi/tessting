@@ -11,7 +11,11 @@ const Demo1Hero1 = (country) => {
 
   
   const {isNepal, countryCodeContext, setCountryCodeContext, setIsNepal} = useContext(countryContext);
+  const [popupState, setPopupState] = useState()
 
+  const openPopup = () => {
+    setPopupState(true)
+  }
   
   
   return (
@@ -51,21 +55,7 @@ const Demo1Hero1 = (country) => {
               <Row>
                 <Col xs="12" className="col-xxl-10">
                   <div className={styles.box}>
-                    {/* <form> */}
-                    {/* <input
-                        type={"email"}
-                        name={"email"}
-                        placeholder="Enter your email"
-                        className="form-control"
-                      /> */}
-                    {/* <Link href="https:/app.restrox.co/register"> */}
-                    {/* <Link> */}
-                      {/* <Button
-                        className={`btn ${styles.getStarted}`}
-                        textTransform="capitalized"
-                      >
-                        <a target="_blank"> Get Started</a>
-                      </Button> */}
+                    
                       <div className="btns-group mb-30 wow fadeInUp" style={{marginTop: "-30px"}}>
                         <a
                           href="https://app.restrox.co/register"
@@ -77,9 +67,6 @@ const Demo1Hero1 = (country) => {
                         :(<>Get started</>)}
                         </a>
                       </div>
-                    {/* </Link> */}
-
-                    {/* </form> */}
                   </div>
                   <p className={styles.paragraphLets} style={{marginTop: "-5px"}}>
                     Free forever, no credit card
@@ -97,10 +84,6 @@ const Demo1Hero1 = (country) => {
 <div className="hero-1-img wow fadeInLeft">
   <img
     className="img-fluid"
-    // src="/images/hero-1-img.png"
-    // src="HomePageImages/image-1-home-8.png"
-    // src="RestroXNewImages/pngfile/image-1-home.png"
-    // src="RestroXNewImages/image-home-latest.png"
     src="images/web_banner_restrox.png"
     alt="RestroX QR Scan and Digital Menu"
     style={{width: "100%"}}

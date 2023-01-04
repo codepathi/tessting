@@ -1,0 +1,107 @@
+
+
+.popupContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.popupContainer p{
+    color: grey;
+    text-align: center;
+    width: 85%;
+}
+
+.popupContainer h2{
+    color: rgb(73, 73, 73);
+}
+
+.popupContainer span{
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+}
+
+.popupContainer .select {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: grey;
+    z-index: 20;
+}
+
+.popupContainer button {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #de1024;
+    border-radius: 5px;
+    color: white;
+    background-color: #de1024;
+    transition: 0.4s;
+}
+
+.popupContainer button:hover {
+    background-color: white;
+    color: #de1024;
+    border: 1px solid #de1024;
+    transition: 0.4s;
+}
+
+.popupContainer .select option {
+    padding: 10px;
+    background-color: red;
+}
+
+
+/* Popup opener */
+
+
+
+.changeCountryContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    gap: 8px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 2px 2px 6px #d2d2d2;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.changeCountryContainer:hover{
+    box-shadow: 1px 3px 10px #5e5e5e;
+    background-color: rgb(255, 248, 248);
+}
+
+.changeCountryContainer .flag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    /* background-image: url(https://flagcdn.com/w40/us.png); */
+    background-size: cover;
+}
+
+.changeCountryContainer .flag image{
+    border-radius: 50%;
+    display: none;
+}
+
+.changeCountryContainer .sideArrow{
+    color: rgb(176, 176, 176);
+}
+
+.changeCountryContainer .divider{
+    height: 15px;
+    width: 0.5px;
+    background-color: rgb(231, 231, 231);
+}
